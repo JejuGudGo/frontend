@@ -60,7 +60,7 @@ import { onMounted, ref } from 'vue';
 import {
   findRecommentSpot,
   IFindRecommentSpotResponse,
-} from '../../../../../../github/frontend/src/apis/courseFeature';
+} from '@/apis/courseFeature';
 const createCourseStore = useCreateCourseStore();
 const { selectedObject, suggestionCourse } = storeToRefs(createCourseStore);
 

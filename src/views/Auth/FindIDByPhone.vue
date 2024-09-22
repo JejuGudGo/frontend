@@ -57,7 +57,7 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue';
 import { useRouter } from 'vue-router';
-import { sendSmsLater, checkSms } from '../../../../../github/frontend/src/apis/authorityFeature';
+import { sendSmsLater, checkSms } from '@/apis/authorityFeature';
 import { autoHyphen, validatePhoneNumber } from '@/utils';
 import { useSignUpIDStore } from '@/stores/auth';
 import { storeToRefs } from 'pinia';

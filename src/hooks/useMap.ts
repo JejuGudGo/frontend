@@ -1,4 +1,4 @@
-import { requestRoute } from '../../../../github/frontend/src/apis/courseFeature';
+import { requestRoute } from '@/apis/courseFeature';
 import { iconMap, IGubunType } from '@/utils/iconMap';
 import { ISpotType } from '@/stores/recommendedCourse/type';
 import { findNowLocation } from '@/utils/map';

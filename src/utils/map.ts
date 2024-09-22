@@ -1,4 +1,4 @@
-import { getReverseGeocoding } from '../../../../github/frontend/src/apis/courseFeature';
+import { getReverseGeocoding } from '@/apis/courseFeature';
 
 export const findNowLocation = (): Promise<[number, number, string]> => {
   return new Promise((resolve, reject) => {

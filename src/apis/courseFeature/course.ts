@@ -1,7 +1,7 @@
-import { ISpotType } from '../../../../../jeju/frontend-retired/src/stores/recommendedCourse/type';
-import { getCookie } from '../../../../../jeju/frontend-retired/src/utils';
+import { ISpotType } from '@/stores/recommendedCourse/type';
+import { getCookie } from '@/utils';
 import axios from 'axios';
-import axiosInstance from '../index';
+import axiosInstance from '..';
 
 const handleAxiosError = (error: unknown) => {
   const errorCode =

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getCookie, setCookie } from '../../../../jeju/frontend-retired/src/utils/cookies';
+import { getCookie, setCookie } from '@/utils/cookies';
 
 const axiosInstance = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,

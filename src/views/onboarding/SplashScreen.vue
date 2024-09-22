@@ -10,9 +10,9 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia';
-import { useRootStore } from '../../stores/rootStore';
-import { LogoIcon } from '../../components';
-import { saveToSessionStorage } from '../../utils';
+import { useRootStore } from '@/stores/rootStore';
+import { LogoIcon } from '@/components';
+import { saveToSessionStorage } from '@/utils';
 
 const rootStore = useRootStore();
 const { showSplash } = storeToRefs(rootStore);

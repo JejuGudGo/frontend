@@ -7,7 +7,7 @@
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { setCookie } from '../../utils';
+import { setCookie } from '@/utils';
 
 export default defineComponent({
   setup() {

@@ -41,7 +41,7 @@
 
 <script lang="ts" setup>
 import { PropType, defineEmits, defineProps } from 'vue';
-import { RadioCheckedIcon, RadioNotCheckedIcon } from '../components';
+import { RadioCheckedIcon, RadioNotCheckedIcon } from '@/components';
 
 const props = defineProps({
   modelValue: {

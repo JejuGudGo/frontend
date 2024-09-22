@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import { ref, defineEmits } from 'vue';
-import { BigSearchIcon } from '../components';
+import { BigSearchIcon } from '@/components';
 
 const emit = defineEmits(['search']);
 const searchText = ref('');

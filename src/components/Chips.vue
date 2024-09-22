@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { computed, defineProps } from 'vue';
-import { LockIcon, UnlockIcon } from '../components';
+import { LockIcon, UnlockIcon } from '@/components';
 
 interface Props {
   status: 'scheduled' | 'ongoing' | 'finished' | 'public' | 'private';

@@ -72,7 +72,7 @@ import {
   EyeOnIcon,
   ErrorIcon,
   DeleteIcon,
-} from '../../components';
+} from '@/components';
 import { IInputType } from './InputTypes';
 
 const props = withDefaults(defineProps<IInputType>(), {

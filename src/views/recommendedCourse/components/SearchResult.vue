@@ -23,7 +23,7 @@
 import { CardImage } from '@/components';
 import { storeToRefs } from 'pinia';
 import { useCreateCourseStore } from '@/stores/recommendedCourse/createCourse';
-import { searchPlaces } from '../../../../../../github/frontend/src/apis/courseFeature/tmap';
+import { searchPlaces } from '@/apis/courseFeature/tmap';
 import { onMounted, ref } from 'vue';
 import { ISpotType } from '@/stores/recommendedCourse/type';
 

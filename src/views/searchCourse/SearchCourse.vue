@@ -57,7 +57,7 @@ import { CourseCard } from '../home/components';
 import { SwipeModal } from '@/components';
 import { useSearchCourseStore } from '@/stores/recommendedCourse/searchCourse';
 import { storeToRefs } from 'pinia';
-import { searchCourse } from '../../../../../github/frontend/src/apis/courseFeature';
+import { searchCourse } from '@/apis/courseFeature';
 
 const searchCourseStore = useSearchCourseStore();
 const { showSearch, showNowMap, showAllCourse, selectCourse } =

@@ -104,7 +104,7 @@ import { computed, ref, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { Check1Icon, Input, Button } from '@/components';
 import { useFindPasswordStore } from '@/stores/auth';
-import { findPassword } from '../../../../../github/frontend/src/apis/userFeature/userInfo';
+import { findPassword } from '@/apis/userFeature/userInfo';
 import {
   hasUppercase,
   hasNumber,

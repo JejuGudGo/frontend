@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import Login from '../views/Auth/Login.vue';
-import NotFound from '../views/NotFound.vue';
-import OAuthCallback from '../views/Auth/OAuthCallback.vue';
-import { getCookie } from '../utils/cookies';
-import { moveTabStore, saveTabStore } from '../utils/enterCondition';
+import Login from '@/views/Auth/Login.vue';
+import NotFound from '@/views/NotFound.vue';
+import OAuthCallback from '@/views/Auth/OAuthCallback.vue';
+import { getCookie } from '@/utils/cookies';
+import { moveTabStore, saveTabStore } from '@/utils/enterCondition';
 
 const loadComponent = (componentPath: string) => () =>
-  import(`../views/${componentPath}.vue`);
+  import(`@/views/${componentPath}.vue`);
 
 // 추후 유효성 검사 필요
 const isTokenValid = (token: string | null): boolean => {
@@ -23,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '',
         name: 'tab-home-container',
-        component: () => import('../components/tabBar/TabContainer.vue'),
+        component: () => import('@/components/tabBar/TabContainer.vue'),
         beforeEnter: (to, from, next) => moveTabStore(to.path, next),
         children: [
           {
@@ -118,7 +118,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '',
         name: 'tab-walk-together-container',
-        component: () => import('../components/tabBar/TabContainer.vue'),
+        component: () => import('@/components/tabBar/TabContainer.vue'),
         beforeEnter: (to, from, next) => moveTabStore(to.path, next),
         children: [
           {
@@ -209,7 +209,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '',
         name: 'tab-id-container',
-        component: () => import('../components/tabBar/TabContainer.vue'),
+        component: () => import('@/components/tabBar/TabContainer.vue'),
         children: [
           {
             path: 'phone',
@@ -244,7 +244,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '',
         name: 'tab-password-container',
-        component: () => import('../components/tabBar/TabContainer.vue'),
+        component: () => import('@/components/tabBar/TabContainer.vue'),
         children: [
           {
             path: 'phone',
@@ -341,5 +341,9 @@ router.beforeEach((to, from, next) => {
 
   next();
 });
+
+function isLoggedIn() {
+  return !!getCookie('user');
+}
 
 export default router;

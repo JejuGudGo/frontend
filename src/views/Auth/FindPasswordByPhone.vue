@@ -58,7 +58,7 @@
 import { Button, Input, ResentTimer } from '@/components';
 import { useRouter } from 'vue-router';
 import { reactive, ref } from 'vue';
-import { sendSmsLater, checkSms, findUserId } from '../../../../../github/frontend/src/apis/authorityFeature';
+import { sendSmsLater, checkSms, findUserId } from '@/apis/authorityFeature';
 import { useSignUpIDStore } from '@/stores/auth';
 import { storeToRefs } from 'pinia';
 import { autoHyphen, validatePhoneNumber } from '@/utils';

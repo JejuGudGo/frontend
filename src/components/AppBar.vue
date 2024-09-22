@@ -26,7 +26,7 @@
 
 <script lang="ts" setup>
 import { useRoute, useRouter } from 'vue-router';
-import { BigArrowIcon, BigDeleteIcon } from '../components';
+import { BigArrowIcon, BigDeleteIcon } from '@/components';
 import { computed } from 'vue';
 
 const router = useRouter();

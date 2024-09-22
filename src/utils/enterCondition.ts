@@ -1,4 +1,4 @@
-import { useRootStore } from '../stores/rootStore';
+import { useRootStore } from '@/stores/rootStore';
 import { storeToRefs } from 'pinia';
 import { Ref } from 'vue';
 import { NavigationGuardNext, RouteLocationNormalized } from 'vue-router';

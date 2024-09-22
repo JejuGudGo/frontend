@@ -9,7 +9,7 @@ import {
   WalkTogetherDisabledIcon,
   // RecommendedCourseActiveIcon,
   // RecommendedCourseDisabledIcon,
-} from '../../components';
+} from '@/components';
 
 export interface NavItem {
   to: string;

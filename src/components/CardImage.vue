@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { computed, defineProps, CSSProperties, withDefaults } from 'vue';
-import { HeartIcon } from '../components';
+import { HeartIcon } from '@/components';
 
 interface Props {
   src?: string;

@@ -65,8 +65,8 @@ import {
 } from '@/stores/auth';
 import { autoHyphen, validatePhoneNumber } from '@/utils';
 import { storeToRefs } from 'pinia';
-import { sendSms, checkSms } from '../../../../../github/frontend/src/apis/authorityFeature';
-import { signUp } from '../../../../../github/frontend/src/apis/userFeature';
+import { sendSms, checkSms } from '@/apis/authorityFeature';
+import { signUp } from '@/apis/userFeature';
 
 const router = useRouter();
 

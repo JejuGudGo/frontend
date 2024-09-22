@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { reactive, toRefs } from 'vue';
-import { getFromLocalStorage } from '../utils';
+import { getFromLocalStorage } from '@/utils';
 
 export const useRootStore = defineStore('root', () => {
   const initialState = {

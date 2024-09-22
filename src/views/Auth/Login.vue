@@ -72,14 +72,15 @@
 </template>
 
 <script setup lang="ts">
-import { LogoIcon, GoogleIcon, Button, Input, KakaoIcon } from '../../components';
-import { login, userInfo } from '../../../../../github/frontend/src/apis/userFeature';
+import { ref } from 'vue';
+import { LogoIcon, GoogleIcon, Button, Input, KakaoIcon } from '@/components';
+import { login, userInfo } from '@/apis/userFeature';
 import { storeToRefs } from 'pinia';
-import { useLoginStore } from '../../stores/auth';
-import router from '../../router';
-import { ILoginRequest } from '../../types/api';
-import { useUserStore } from '../../stores/user/userState';
-import { IUserStateType } from '../../stores/user/type';
+import { useLoginStore } from '@/stores/auth';
+import router from '@/router';
+import { ILoginRequest } from '@/types/api';
+import { useUserStore } from '@/stores/user/userState';
+import { IUserStateType } from '@/stores/user/type';
 
 const loginStore = useLoginStore();
 const userStore = useUserStore();

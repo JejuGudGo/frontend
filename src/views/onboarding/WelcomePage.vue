@@ -33,10 +33,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
-import { Carousel, Button } from '../../components';
-import { useRootStore } from '../../stores/rootStore';
+import { Carousel, Button } from '@/components';
+import { useRootStore } from '@/stores/rootStore';
 import { storeToRefs } from 'pinia';
-import { saveToLocalStorage } from '../../utils';
+import { saveToLocalStorage } from '@/utils';
 
 const router = useRouter();
 const rootStore = useRootStore();

@@ -23,8 +23,8 @@
 
 <script setup lang="ts">
 import { defineProps, reactive, defineEmits } from 'vue';
-import { ReturnIcon } from '../components';
-import { Timer } from '../components';
+import { ReturnIcon } from '@/components';
+import { Timer } from '@/components';
 
 const emits = defineEmits(['resendSms']);
 

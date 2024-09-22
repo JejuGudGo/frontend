@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import { withDefaults, defineProps } from 'vue';
-import { StarIcon, DistanceIcon, Time1Icon, Tag } from '../components';
+import { StarIcon, DistanceIcon, Time1Icon, Tag } from '@/components';
 
 interface Props {
   distance?: boolean;

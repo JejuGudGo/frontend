@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import { NotificationIcon } from '../components';
+import { NotificationIcon } from '@/components';
 </script>
 
 <style scoped lang="scss">

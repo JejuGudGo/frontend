@@ -22,7 +22,7 @@
 <script setup lang="ts">
 import { Button, Input } from '@/components';
 import { validateEmail } from '@/utils';
-import { checkId } from '../../../../../github/frontend/src/apis/authorityFeature';
+import { checkId } from '@/apis/authorityFeature';
 import { watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { useSignUpIDStore } from '@/stores/auth';

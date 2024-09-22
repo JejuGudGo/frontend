@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted, defineProps, watch } from 'vue';
-import { TimeIcon } from '../components';
+import { TimeIcon } from '@/components';
 
 const props = defineProps<{
   startTime: number;

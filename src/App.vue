@@ -1,7 +1,7 @@
 <template>
   <transition
-      name="fade"
-      mode="out-in"
+    name="fade"
+    mode="out-in"
   >
     <div class="app-template">
       <template v-if="showSplash">
@@ -13,7 +13,7 @@
       <template v-else>
         <AppBar v-if="!$route.meta.hideAppBar" />
         <div
-            :class="{
+          :class="{
             content: true,
             'with-appbar': !$route.meta.hideAppBar,
             'with-navbar': !$route.meta.hideNavBar,
@@ -30,10 +30,10 @@
 <script setup>
 import { onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
-import { NavBar, AppBar } from './components';
-import SplashScreen from './views/onboarding/SplashScreen.vue';
-import WelcomePage from './views/onboarding/WelcomePage.vue';
-import { useRootStore } from './stores/rootStore';
+import { NavBar, AppBar } from '@/components';
+import SplashScreen from '@/views/onboarding/SplashScreen.vue';
+import WelcomePage from '@/views/onboarding/WelcomePage.vue';
+import { useRootStore } from '@/stores/rootStore';
 
 const rootStore = useRootStore();
 const { showSplash, showUserGuide } = storeToRefs(rootStore);

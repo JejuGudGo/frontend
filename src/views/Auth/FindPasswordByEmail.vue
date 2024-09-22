@@ -55,7 +55,7 @@
 <script setup lang="ts">
 import { ref, reactive, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import { sendEmail, sendEmailLater } from '../../../../../github/frontend/src/apis/authorityFeature/index';
+import { sendEmail, sendEmailLater } from '@/apis/authorityFeature/index';
 import { Button, Input, ResentTimer } from '@/components';
 
 const router = useRouter();

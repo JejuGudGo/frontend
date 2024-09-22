@@ -71,7 +71,7 @@ import {
   KebabIcon,
   ShieldIcon,
   DownIcon,
-} from '../components';
+} from '@/components';
 import { ref, onMounted } from 'vue';
 
 const isExpanded = ref(false);

@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { createCourse } from '../../../../../../github/frontend/src/apis/courseFeature';
+import { createCourse } from '@/apis/courseFeature';
 import { ModalHeader } from './index';
 import { onMounted } from 'vue';
 import { storeToRefs } from 'pinia';

@@ -26,7 +26,7 @@
 import { Button, RadioButton } from '@/components';
 import { useRouter, useRoute } from 'vue-router';
 import { ref, onMounted } from 'vue';
-import { findID } from '../../../../../github/frontend/src/apis/userFeature/userInfo';
+import { findID } from '@/apis/userFeature/userInfo';
 
 const router = useRouter();
 const route = useRoute(); // useRoute 사용하여 현재 라우트 정보 가져오기

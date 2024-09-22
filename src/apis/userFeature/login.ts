@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { setCookie, hasError, getCookie } from '../../../../../jeju/frontend-retired/src/utils';
-import { ILoginRequest } from '../../../../../jeju/frontend-retired/src/types/api';
+import { setCookie, hasError, getCookie } from '@/utils';
+import { ILoginRequest } from '@/types/api';
 
 export const login = async (data: ILoginRequest) => {
   try {
