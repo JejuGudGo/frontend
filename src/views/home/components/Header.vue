@@ -1,7 +1,7 @@
 <template>
   <header class="header-content">
     <div class="header-text heading2-bold">
-      {{ userName }}님, 혼저옵서예! <br />
+      {{ nickname }}님, 혼저옵서예! <br />
       오늘은 어디를 걸을까요?
     </div>
     <div class="header-info">
@@ -39,7 +39,7 @@ import { ref, onMounted } from 'vue';
 import { Search, WeatherIcon, NoteIcon } from '@/components';
 import { useRouter } from 'vue-router';
 
-const userName = ref('');
+const nickname = ref('');
 const temperature = ref(0);
 const weather = ref('');
 const weatherIcon = ref('');
@@ -53,7 +53,7 @@ const fetchUserInfo = async () => {
       },
     });
     const userData = response.data;
-    userName.value = userData.name || userData.nickname || '사용자';
+    nickname.value = userData.nickname || '제주객';
   } catch (error) {
     console.error('Failed to fetch user info:', error);
   }
