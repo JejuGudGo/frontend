@@ -1,0 +1,41 @@
+@import "grayscale";
+@import "green-red";
+@import "transparent";
+@import "semantic";
+
+// Background
+$background: $grey-850;
+
+// Button colors
+$button-primary: $primary-500;
+$button-on-primary: $neutral-900;
+$button-secondary: $neutral-900;
+$button-on-secondary: $neutral-100;
+$button-surface-pressed: $primary-700;
+
+// Card colors
+$card-on-surface: $white-100;
+$card-surface: $grey-800;
+
+// Validation text colors
+$validation-text-default: $neutral-100;
+$validation-text-error: $red-300;
+$validation-text-disabled: $neutral-500;
+
+// Chip colors
+$chip-stroke-default: $neutral-100;
+$chip-stroke-disabled: $neutral-500;
+$chip-surface-pressed: $primary-700;
+
+// Text colors
+$text-error: $red-300;
+$text-body: $neutral-300;
+$text-muted: $neutral-500;
+$text-white: $white-100;
+$text-white-50: $opacity-white-50;
+$text-black: $neutral-black;
+$text-black-50: $opacity-black-50;
+$text-primary: $primary-500;
+$text-secondary: $neutral-100;
+$text-active: $neutral-50;
+$text-disabled: $neutral-300;
