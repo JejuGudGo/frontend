@@ -11,6 +11,7 @@ export const useSignUpVerificationStore = defineStore(
       phoneNumber: '',
       phoneNumberState: 'default' as InputState,
       authState: 'default' as 'default' | 'error',
+
       code: '',
       codeState: 'default' as InputState,
       codeMessege: '',

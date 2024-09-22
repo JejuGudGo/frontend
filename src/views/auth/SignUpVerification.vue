@@ -42,6 +42,7 @@
         class="authcode"
         placeholder="인증번호 입력"
         v-if="state.isCodeSent"
+
         v-model="code"
         :state="codeState"
         :message="codeMessege"
@@ -113,13 +114,13 @@ const sendCode = async () => {
     }
     nameState.value = 'default';
     if (!validatePhoneNumber(cleanPhoneNumber.value)) {
+      phoneNumberState.value = 'error';
       return;
     }
     phoneNumberState.value = 'default';
 
     state.verificationStart = true;
     state.verificationExpired = false;
-
     const response = await sendSms(name.value, cleanPhoneNumber.value);
     if (response === 200) {
       state.isCodeSent = true;
