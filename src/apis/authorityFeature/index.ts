@@ -20,7 +20,7 @@ export const sendSms = async (name: string, phoneNumber: string) => {
       headers,
     });
 
-    return response.data;
+    return response.status;
   } catch (error) {
     handleAxiosError(error);
   }
