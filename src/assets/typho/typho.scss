@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Pretendard100';
+  src: url("./Pretendard-Thin.woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard200';
+  src: url("./Pretendard-ExtraLight.woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard300';
+  src: url("./Pretendard-Light.woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard400';
+  src: url("./Pretendard-Regular.woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard500';
+  src: url("./Pretendard-Medium.woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard600';
+  src: url("./Pretendard-SemiBold.woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard700';
+  src: url("./Pretendard-Bold.woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard800';
+  src: url("./Pretendard-ExtraBold.woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard900';
+  src: url("./Pretendard-Black.woff2");
+}
+
+// Bold Typography
+@mixin heading1 {
+  font-family: 'Pretendard700', serif;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -2%;
+}
+
+@mixin heading2 {
+  font-family: 'Pretendard700', serif;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -2%;
+}
+
+@mixin heading3 {
+  font-family: 'Pretendard700', serif;
+  font-size: 21px;
+  line-height: 30px;
+  letter-spacing: -2%;
+}
+
+@mixin subheading {
+  font-family: 'Pretendard700', serif;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -2%;
+}
+
+@mixin body1-bold {
+  font-family: 'Pretendard700', serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -1%;
+}
+
+@mixin body2-bold {
+  font-family: 'Pretendard700', serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1%;
+}
+
+@mixin caption-bold {
+  font-family: 'Pretendard700', serif;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -1%;
+}
+
+// Medium Typography
+@mixin body1-medium {
+  font-family: 'Pretendard500', serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -1%;
+}
+
+@mixin body2-medium {
+  font-family: 'Pretendard500', serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1%;
+}
+
+@mixin caption-medium {
+  font-family: 'Pretendard500', serif;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -1%;
+}
+
+// Regular Typography
+@mixin body1-regular {
+  font-family: 'Pretendard400', serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -1%;
+}
+
+@mixin body2-regular {
+  font-family: 'Pretendard400', serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1%;
+}
+
+@mixin caption-regular {
+  font-family: 'Pretendard400', serif;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -1%;
+}

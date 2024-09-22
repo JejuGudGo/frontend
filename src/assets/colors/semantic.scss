@@ -1,0 +1,38 @@
+@import "grayscale";
+@import "green-red";
+@import "transparent";
+
+// Primary colors
+$primary-700: $green-700;
+$primary-500: $green-500;
+$primary-300: $green-300;
+$primary-100: $green-100;
+$primary-50: $green-50;
+
+// Neutral colors
+$neutral-black: $black-100;
+$neutral-900: $grey-900;
+$neutral-700: $grey-700;
+$neutral-600: $grey-600;
+$neutral-500: $grey-500;
+$neutral-300: $grey-300;
+$neutral-100: $grey-100;
+$neutral-50: $grey-50;
+$neutral-white: $white-100;
+
+// Error color
+$error: $red-300;
+
+// Opacity/White
+$opacity-white-90: rgba(255, 255, 255, 0.9);
+$opacity-white-70: rgba(255, 255, 255, 0.7);
+$opacity-white-50: rgba(255, 255, 255, 0.5);
+$opacity-white-30: rgba(255, 255, 255, 0.3);
+$opacity-white-15: rgba(255, 255, 255, 0.15);
+
+// Opacity/Black
+$opacity-black-90: rgba(0, 0, 0, 0.9);
+$opacity-black-70: rgba(0, 0, 0, 0.7);
+$opacity-black-50: rgba(0, 0, 0, 0.5);
+$opacity-black-30: rgba(0, 0, 0, 0.3);
+$opacity-black-15: rgba(0, 0, 0, 0.15);
