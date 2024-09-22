@@ -14,7 +14,13 @@ import HelloWorld from './components/HelloWorld.vue'
   <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
+<style lang = "scss">
+@import "./assets/typho/typho";
+
+body {
+  @include heading1;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
