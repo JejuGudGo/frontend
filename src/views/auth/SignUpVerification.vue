@@ -32,8 +32,17 @@
           @click="sendCode"
         />
       </div>
+      <div
+        v-if="authState === 'error'"
+        class="error-message"
+      >
+        이미 가입한 계정이 존재합니다.
+      </div>
       <Input
+        class="authcode"
         placeholder="인증번호 입력"
+        v-if="state.isCodeSent"
+
         v-model="code"
         :state="codeState"
         :message="codeMessege"
@@ -41,6 +50,8 @@
     </span>
 
     <ResentTimer
+      class="authcode"
+      v-if="state.isCodeSent"
       :verificationStart="state.verificationStart"
       :handleTimeout="handleTimeout"
       @resendSms="sendCode"
@@ -76,6 +87,7 @@ const {
   nameState,
   phoneNumber,
   phoneNumberState,
+  authState,
   code,
   codeState,
   codeMessege,
@@ -91,6 +103,7 @@ const { password } = storeToRefs(signUpPasswordStore);
 const state = reactive({
   verificationStart: false,
   verificationExpired: false,
+  isCodeSent: false,
 });
 
 const sendCode = async () => {
@@ -108,12 +121,15 @@ const sendCode = async () => {
 
     state.verificationStart = true;
     state.verificationExpired = false;
-    await sendSms(name.value, cleanPhoneNumber.value);
+    const response = await sendSms(name.value, cleanPhoneNumber.value);
+    if (response === 200) {
+      state.isCodeSent = true;
+    }
   } catch (error) {
     const smsError = error as { errorCode: string | null };
     if (smsError.errorCode === 'INVALID_VALUE_04') {
-      codeState.value = 'error';
-      codeMessege.value = '이미 계정이 존재합니다.';
+      phoneNumberState.value = 'error';
+      authState.value = 'error';
     }
   }
 };
@@ -198,6 +214,12 @@ const nextPage = async () => {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.error-message {
+  font-family: 'Pretendard-Medium';
+  color: var(--color-validation-text-error);
+  font-size: 1.2rem;
 }
 
 .next-button {
