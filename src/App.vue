@@ -1,30 +1,83 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <transition
+    name="fade"
+    mode="out-in"
+  >
+    <div class="app-template">
+      <template v-if="showSplash">
+        <SplashScreen />
+      </template>
+      <template v-else-if="!showUserGuide">
+        <WelcomePage />
+      </template>
+      <template v-else>
+        <AppBar v-if="!$route.meta.hideAppBar" />
+        <div
+          :class="{
+            content: true,
+            'with-appbar': !$route.meta.hideAppBar,
+            'with-navbar': !$route.meta.hideNavBar,
+          }"
+        >
+          <router-view />
+        </div>
+        <NavBar v-if="!$route.meta.hideNavBar" />
+      </template>
+    </div>
+  </transition>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script setup>
+import { onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
+import { NavBar, AppBar } from '@/components';
+import SplashScreen from '@/views/onboarding/SplashScreen.vue';
+import WelcomePage from '@/views/onboarding/WelcomePage.vue';
+import { useRootStore } from '@/stores/rootStore';
+
+const rootStore = useRootStore();
+const { showSplash, showUserGuide } = storeToRefs(rootStore);
+
+onMounted(() => {
+  setTimeout(() => {
+    showSplash.value = false;
+  }, 2000);
+});
+</script>
+
+<style lang="scss">
+.app-template {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.content.with-appbar {
+  margin-top: 48px;
+}
+
+.content.with-navbar {
+  padding-bottom: 80px;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

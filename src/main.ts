@@ -1,9 +1,15 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
+import App from '@/App.vue';
+import '@/registerServiceWorker';
+import router from '@/router';
+import '@/assets/styles/style.scss';
 
-import './assets/typho/typho.scss';
-import './assets/colors/color-global.scss'
-import './assets/variables/size.scss'
+// if (process.env.NODE_ENV === 'development') {
+//   require('@/mocks/_mockSetup');
+// }
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+const pinia = createPinia();
+app.use(pinia).use(router).mount('#app');
