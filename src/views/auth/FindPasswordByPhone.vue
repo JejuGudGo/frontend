@@ -70,7 +70,7 @@ const { inputState, inputMessage } = storeToRefs(signUpIDStore);
 const state = reactive({
   verificationSent: false,
   verificationExpired: false,
-  verificationStart: null, // 타이머 시작 여부
+  verificationStart: null,
 });
 
 const name = ref('');

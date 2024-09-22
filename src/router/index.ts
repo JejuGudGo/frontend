@@ -217,12 +217,6 @@ const routes: Array<RouteRecordRaw> = [
             component: loadComponent('auth/FindIDByPhone'),
             meta: { tabTitle: '휴대폰 인증' },
           },
-          {
-            path: 'email',
-            name: 'find-id-by-email',
-            component: loadComponent('auth/FindIDByEmail'),
-            meta: { tabTitle: '이메일 인증' },
-          },
         ],
       },
       {

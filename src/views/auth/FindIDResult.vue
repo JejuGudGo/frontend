@@ -10,14 +10,20 @@
         :options="radioOptions"
       />
     </div>
+    <div v-else>
+      <p>가입된 아이디가 없습니다.</p>
+    </div>
+
     <div class="find-password">
       <span class="find-password-text">비밀번호가 기억나지 않으세요?</span>
       <span class="find-password-link">비밀번호 찾기</span>
     </div>
+
     <Button
       class="next-button"
+      :disabled="!canProceed"
       @click="nextPage"
-      text="다음"
+      :text="buttonText"
     />
   </div>
 </template>
@@ -25,17 +31,16 @@
 <script setup lang="ts">
 import { Button, RadioButton } from '@/components';
 import { useRouter, useRoute } from 'vue-router';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import { findID } from '@/apis/userFeature/userInfo';
 
 const router = useRouter();
-const route = useRoute(); // useRoute 사용하여 현재 라우트 정보 가져오기
+const route = useRoute();
 
 const selectedOption = ref('');
 const radioOptions = ref([]);
 const userCount = ref(0);
 
-// 컴포넌트가 마운트될 때 API 요청을 보내고 결과를 처리
 onMounted(async () => {
   try {
     const name = route.query.name as string;
@@ -58,8 +63,20 @@ onMounted(async () => {
   }
 });
 
+const canProceed = computed(() => {
+  return userCount.value === 0 || selectedOption.value !== '';
+});
+
+const buttonText = computed(() => {
+  return userCount.value > 0 ? '다음' : '회원가입 바로가기';
+});
+
 const nextPage = () => {
-  router.push({ path: '/findpassword/phone' });
+  if (userCount.value === 0) {
+    router.push({ path: '/signup' });
+  } else {
+    router.push({ path: '/findpassword/phone' });
+  }
 };
 </script>
 

@@ -42,7 +42,6 @@
         class="authcode"
         placeholder="인증번호 입력"
         v-if="state.isCodeSent"
-
         v-model="code"
         :state="codeState"
         :message="codeMessege"
