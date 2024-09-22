@@ -22,7 +22,7 @@ module.exports = defineConfig({
       },
     },
   },
-  publicPath: process.env.NODE_ENV === 'production' ? '/frontend/' : '/',
+  publicPath: '/',
   pwa: {
     name: 'My App',
     themeColor: '#4DBA87',
