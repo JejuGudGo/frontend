@@ -17,6 +17,7 @@ module.exports = defineConfig({
       '/api': {
         target: process.env.VUE_APP_BASE_API,
         changeOrigin: true,
+        withCredentials: true,
         ws: true,
       },
     },
