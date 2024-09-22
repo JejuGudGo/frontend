@@ -1,0 +1,9 @@
+{
+  "theme_color": "#3eaf7c",
+  "background_color": "#3eaf7c",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/login",
+  "name": "Jeju_Gudgo",
+  "short_name": "PWA"
+}
